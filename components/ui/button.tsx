@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utlis";
+import { cn } from "@/lib/utils";
 import { forwardRef } from "react";
 
 export interface ButtonProps
@@ -25,7 +25,9 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     `,
           className
         )}
+        disabled={disabled}
         ref={ref}
+        {...props}
       >
         {children}
       </button>
